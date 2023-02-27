@@ -8,20 +8,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div>
     <div class="hero">
         <div class="form-box"></div>
         <div class="button-box">
             <div id="btn"></div>
-            <button type="button" class="toggle-btn">Log In</button>
-            <button type="button" class="toggle-btn">Register</button>
-
+            <button type="button" class="toggle-btn"onclick="login()">Log In</button>
+            <button type="button" class="toggle-btn"onclick="Register()">Register</button>
         </div>
+        <div> class="social-icons">
+            <img src="https://cdn.pixabay.com/photo/2022/04/08/07/18/facebook-7118901_1280.png" alt="fb logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n_urpJ9XpwOTdzBVbGvactwHrPagYQrTJPYjxfxLGkSyu7nJZVqRVGAeohnPgKMrnKE&usqp=CAU"alt="twitter logo">
+            <img src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1" alt="fb logo">
+    
+    <form id="login" class="input-group">
+        <input type ="text" class="input-field" placeholder="User Id"required>
+        <input type ="text" class="input-field" placeholder="Enter Password"required><br>
+        <input type="checkbox" class="check-box"><span>Remember password</span>
+        <button type="submit" class="submit-btn">Log in</button>
+    </form>
+    <form id="register" class="input-group">
+        <input type ="text" class="input-field" placeholder="User Id"required>
+        <input type ="Email ID" class="input-field" placeholder="Email ID"required><br>
+        <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+        <button type="submit" class="submit-btn">Register</button>
+    </form>
     </div>
-    <div class="social-icons">
-        <img src="https://cdn.pixabay.com/photo/2022/04/08/07/18/facebook-7118901_1280.png" alt="fb logo">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n_urpJ9XpwOTdzBVbGvactwHrPagYQrTJPYjxfxLGkSyu7nJZVqRVGAeohnPgKMrnKE&usqp=CAU"alt="twitter logo">
-        <img src="https://play-lh.googleusercontent.com/6UgEjh8Xuts4nwdWzTnWH8QtLuHqRMUB7dp24JYVE2xcYzq4HA8hFfcAbU-R-PC_9uA1" alt="fb logo">
+</div>
+    <script>
+    var x  = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
 
-    </div>
+    function register(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+    function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+    }
+    </script>
 </body>
 </html>
